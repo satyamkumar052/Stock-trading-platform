@@ -12,10 +12,10 @@ const Home = () => {
   useEffect(() => {
     const verifyCookie = async () => {
       if (!cookies.token) {
-        navigate("/auth/login");
+        navigate("/login");
       }
       const { data } = await axios.post(
-        "http://localhost:3000/auth/verify",
+        "http://localhost:3000/verify",
         {},
         { withCredentials: true }
       );
@@ -35,7 +35,7 @@ const Home = () => {
   };
   return (
     <>
-      <div className="home_page">
+      <div className="auth-page home_page">
         <h4>
           {" "}
           Welcome <span>{username}</span>

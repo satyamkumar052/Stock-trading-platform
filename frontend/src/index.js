@@ -12,10 +12,10 @@ import Navbar from "./landing_page/Navbar";
 import Footer from "./landing_page/Footer";
 import PageNotFound from "./landing_page/PageNotFound";
 
-// import { Login, Signup as AuthSignup, Home } from "./pages";
-import Login from "./pages/Login";
-import AuthSignup from "./pages/Signup";
-import Home from "./pages/Home";
+// import { Login, Signup as AuthSignup, Home } from "./";
+import Login from "./landing_page/Login"
+import AuthSignup from "./landing_page/Signup";
+import Home from "./landing_page/Home";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
@@ -36,8 +36,8 @@ root.render(
             <Route path="*" element={<PageNotFound/>} />
 
             {/* Auth Routes */}
-            <Route path="/auth/signup" element={<AuthSignup />} />
-            <Route path="/auth/login" element={<Login />} />
+            <Route path="/signup1" element={<AuthSignup />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Home />} />
 
         </Routes>
