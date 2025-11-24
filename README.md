@@ -1,2 +1,1 @@
-This is stock trading platform
- 
+This is stock trading platform.
