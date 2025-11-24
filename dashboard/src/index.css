@@ -1,0 +1,436 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.down {
+  color: rgb(223, 73, 73);
+}
+.up {
+  color: rgb(103, 201, 136);
+}
+
+.PanelResizeHandle:hover {
+  background: #999 !important;
+}
+
+
+
+/* Dashboard */
+.dashboard-container {
+  padding-top: 12vh;
+  display: flex;
+  width: 100%;
+  height: 88vh;
+}
+
+.content {
+  flex: 1;
+  height: 88vh;  
+  margin-left: 30.85%;
+  height: calc(100vh-12vh);
+  overflow-y: auto;
+  background: white;
+  border-left: 1px solid rgb(191, 188, 188);
+}
+
+
+/* TopBar */
+.Topbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px 2px rgb(251, 250, 250);
+  z-index: 10;
+  background-color: rgb(245, 245, 248);
+  padding: 0 4rem;
+  border-bottom: 1px solid rgb(180, 173, 173);
+}
+
+.indices-container {
+  flex-basis: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  border-right: 1px solid rgb(180, 173, 173);
+  font-weight: 500;
+  padding-right: 3rem;
+}
+
+
+.nifty, .sensex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  height: 100%;
+  opacity: 0.75;
+}
+
+.index-points {
+  color: red;
+}
+
+
+.indices-container div p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+/* Menu */
+.menu-container {
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.menus {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menus ul {
+  display: flex;
+  font-weight: 500;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  gap: 2rem;
+}
+
+.menus div {
+  display: flex;
+  gap: 1rem;
+}
+.username:hover {
+  color: rgb(245, 104, 52);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.menu:hover {
+  color: rgb(245, 104, 52);
+}
+.menu.selected {
+  color: rgb(245, 104, 52);
+}
+
+
+.menus div ul li p {
+  margin: 0;
+  cursor: pointer;
+}
+
+.menus img {
+  width: 2rem;
+}
+
+.profile {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 218, 241);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+}
+
+.profile p {
+  position: relative;
+  top: 0.5rem;
+}
+
+
+/* WatchList */
+
+.watchlist-container {
+  position: fixed;
+  top: 12vh;
+  left: 0;
+  width: 474px;
+  height: calc(100vh - 12vh);
+  background: #ffffff;
+  border-right: 1px solid #e4e4e4;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  z-index: 9;
+}
+
+.search-container {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  width: 100%;
+  border: none;
+  font-size: 0.82rem;
+  padding: 0.6rem 0;
+  outline: none;
+}
+
+.search-container span {
+  opacity: 0.6;
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.list li {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.list li:hover {
+  background: #eeeded;
+}
+
+.percent {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(146, 146, 146);
+}
+
+/* WatchList -> WatchListItem */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.item p {
+  font-weight: 500;
+}
+
+/* WatchList -> WatchListAction */
+.actions span button {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  font-size: small;
+  margin: 0 3px;
+  border: none;
+  padding: 3px 5px;
+}
+
+.icon {
+  font-size: 0.8rem !important;
+}
+.buy {
+  background-color: rgb(73, 131, 235) !important;
+  border-radius: 5px;
+  color: #fff !important;
+  border: 1px solid rgb(165, 192, 233);
+}
+.sell {
+  background-color: rgb(241, 73, 41) !important;
+  border-radius: 5px;
+  color: #fff !important;
+  border: 1px solid rgb(165, 192, 233);
+}
+
+
+/* Summary */
+.username h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(83, 83, 83);
+  margin-bottom: 20px;
+}
+
+.section span p {
+  padding: 2rem 0;
+}
+
+.data {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+}
+
+.data hr {
+  flex: 0 0 1px;
+  height: 40px;         /* vertical divider look */
+  background: #ccc;
+  border: none;
+}
+
+.section {
+  margin-top:3rem;
+}
+
+small {
+  font-size: x-small;
+}
+
+.profit {
+  color: rgb(138, 218, 126);
+}
+
+.second {
+  opacity: 0.7;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.summary-container {
+  margin-top: 6rem;
+}
+
+/* Orders */
+.orders .no-orders p {
+  opacity: 0.6;
+}
+
+.orders {
+  width: 1000px;
+  position: relative;
+  margin: 6rem 0 0 3rem;
+}
+.no-orders {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Holdings  and Positions*/
+.holding-cont {
+  margin: 6rem 0 0 3rem;
+  width: 90%;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgb(71, 71, 71);;
+  margin-bottom: 4%;
+}
+
+.order-table table {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.order-table table tr {
+  border-top: 1px solid #e0dddd;;
+  border-bottom: 1px solid #e0dddd;;
+}
+
+
+.order-table table tr th {
+  opacity: 0.8;
+  font-size: 0.8rem;
+  font-weight: 300;
+  padding: 15px 10px;
+}
+
+.holdings-profile {
+  margin-top: 10%;
+}
+
+.holdings-profile div h5 {
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.holdings-profile div p {
+  padding-top: 8%;
+  font-size: x-small;
+  opacity: 0.5;
+}
+
+.holdings-profile div .profit {
+  opacity: 1 !important;
+  font-weight: 500;
+}
+
+.order-table td.loss {
+  color: rgb(250, 118, 78);
+}
+
+.item td {
+  opacity: 0.9;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+
+
+
+/* Funds */
+
+.funds {
+  margin-top: 4rem;
+  display: flex;
+  width: 100%;
+  text-align: right;
+  font-size: 0.8rem;
+  justify-content: flex-end;
+  padding: 0 5%;
+  gap: 1%;
+}
+
+.funds p {
+  opacity: 0.6;
+}
+
+.table {
+  border: 1px solid #ddd;
+  padding: 5% 8%;
+}
+
+.table .data1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table .data > * {
+  margin-bottom: 5%;
+}
+
+.funds-table {
+  max-width: 33%;
+  padding: 2% 0 0 5% ;
+}
+
+.commodity {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 2% 8%;
+}
