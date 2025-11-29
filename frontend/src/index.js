@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import Homepage from "./landing_page/home/HomePage";
-import Signup from "./landing_page/signup/Signup";
 import AboutPage from "./landing_page/about/AboutPage";
 import ProductPage from "./landing_page/products/ProductPage";
 import PricingPage from "./landing_page/pricing/PricingPage";
@@ -16,6 +15,7 @@ import PageNotFound from "./landing_page/PageNotFound";
 import Login from "./landing_page/Login"
 import AuthSignup from "./landing_page/Signup";
 import Home from "./landing_page/Home";
+import "./landing_page/pages.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
@@ -28,18 +28,17 @@ root.render(
         <Navbar />
         <Routes>
             <Route path="/" element={<Homepage/>} />
-            <Route path="/signup" element={<Signup/>} />
             <Route path="/about" element={<AboutPage/>} />
             <Route path="/product" element={<ProductPage/>} />
             <Route path="/pricing" element={<PricingPage/>} />
             <Route path="/support" element={<SupportPage/>} />
-            <Route path="*" element={<PageNotFound/>} />
 
             {/* Auth Routes */}
-            <Route path="/signup1" element={<AuthSignup />} />
+            <Route path="/signup" element={<AuthSignup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Home />} />
 
+            <Route path="*" element={<PageNotFound/>} />
         </Routes>
         <Footer />
     </BrowserRouter>

@@ -1,0 +1,57 @@
+.formWrapper {
+  all: unset;              /* resets inherited/global styles */
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  font-family: inherit;    /* use app font only */
+}
+
+.formWrapper h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.formWrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formWrapper label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.formWrapper input {
+  all: unset;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.formWrapper button {
+  all: unset;
+  background: black;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.formWrapper span {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.formWrapper a {
+  color: blue;
+  text-decoration: none;
+}

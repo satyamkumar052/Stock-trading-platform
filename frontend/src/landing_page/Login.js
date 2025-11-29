@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/auth/login",
+        "http://localhost:3000/login",
         {
           ...inputValue,
         },
@@ -42,7 +42,7 @@ const Login = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/");  // after login success redirect path to /
+          navigate("/satyam");  // after login success redirect path to /
         }, 1000);
       } else {
         handleError(message);
@@ -58,7 +58,8 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-page form_container mt-5 pt-5">
+    <div className="auth-root">
+    <div className="form_container">
       <h2>Login Account</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -83,10 +84,11 @@ const Login = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to={"/auth/signup"}>Signup</Link>
+          Already have an account? <Link to={"/signup"}>Signup</Link>
         </span>
       </form>
       <ToastContainer />
+    </div>
     </div>
   );
 };

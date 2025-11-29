@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ quiet: true });
 
 const express = require('express');
 const app = express();
@@ -19,7 +19,7 @@ const PORT = process.env.PORT || "3000";
 const uri = process.env.MONGO_URL;
 
 app.use(cors({
-    origin: "http://localhost:3001",
+    origin: ["http://localhost:3002", "http://localhost:3001"],
     credentials: true
 }));
 app.use(cookieParser());
@@ -68,6 +68,11 @@ app.post("/newOrder", async(req, res)=>{
 
     res.send("Order placed!");
 });
+
+app.get("/verify", (req, res) => {
+  res.json({ status: true, user: "TestUser" });
+});
+
 
 app.get("/", (req,res)=>{
     res.send("Heyy!");

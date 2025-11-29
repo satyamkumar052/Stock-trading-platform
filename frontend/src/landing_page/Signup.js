@@ -32,7 +32,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/auth/signup",
+        "http://localhost:3000/signup",
         {
           ...inputValue,
         },
@@ -59,7 +59,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="auth-page form_container mt-5 pt-5">
+    <div className="auth-root">
+    <div className="form_container">
       <h2>Signup Account</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -94,10 +95,11 @@ const Signup = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Already have an account? <Link to={"/auth/login"}>Login</Link>
+          Already have an account? <Link to={"/login"}>Login</Link>
         </span>
       </form>
       <ToastContainer />
+    </div>
     </div>
   );
 };

@@ -31,11 +31,11 @@ const Home = () => {
   }, [cookies, navigate, removeCookie]);
   const Logout = () => {
     removeCookie("token");
-    navigate("/auth/signup");
+    navigate("/login");
   };
   return (
     <>
-      <div className="auth-page home_page">
+      <div className="auth-page home_page mt-5 pt-5">
         <h4>
           {" "}
           Welcome <span>{username}</span>
