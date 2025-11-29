@@ -1,6 +1,6 @@
-# 📈 Quantora
+# 📈 TradeNox
 
-A full-stack stock monitoring & analysis platform built using the **MERN stack**, featuring secure authentication, real-time dashboards, and modern UI components.
+A full-stack stock trading platform that allows users to execute buy/sell trades, monitor real-time market data through interactive charts, and track all orders in one unified dashboard with secure authentication.
 
 ---
 
