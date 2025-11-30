@@ -32,7 +32,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/signup",
+        "https://backend-8k3f.onrender.com/signup",
         {
           ...inputValue,
         },
@@ -42,7 +42,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("/");
+          navigate("/home");
         }, 1000);
       } else {
         handleError(message);

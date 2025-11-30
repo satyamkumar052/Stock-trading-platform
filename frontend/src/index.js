@@ -16,15 +16,16 @@ import Login from "./landing_page/Login"
 import AuthSignup from "./landing_page/Signup";
 import Home from "./landing_page/Home";
 import "./landing_page/pages.css";
+import { CookiesProvider } from "react-cookie";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+    <CookiesProvider>
     <BrowserRouter>
         <ScrollToTop /> 
-
         <Navbar />
         <Routes>
             <Route path="/" element={<Homepage/>} />
@@ -36,10 +37,11 @@ root.render(
             {/* Auth Routes */}
             <Route path="/signup" element={<AuthSignup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Home />} />
+            <Route path="/home" element={<Home />} />
 
             <Route path="*" element={<PageNotFound/>} />
         </Routes>
         <Footer />
     </BrowserRouter>
+    </CookiesProvider>
 );

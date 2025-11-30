@@ -14,8 +14,8 @@ const Home = () => {
       if (!cookies.token) {
         navigate("/login");
       }
-      const { data } = await axios.post(
-        "http://localhost:3000/verify",
+      const { data } = await axios.get(
+        "https://backend-8k3f.onrender.com/verify",
         {},
         { withCredentials: true }
       );

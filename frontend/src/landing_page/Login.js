@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/login",
+        "https://backend-8k3f.onrender.com/login",
         {
           ...inputValue,
         },
@@ -41,8 +41,9 @@ const Login = () => {
       const { success, message } = data;
       if (success) {
         handleSuccess(message);
+        localStorage.setItem("token", data.token);
         setTimeout(() => {
-          navigate("/satyam");  // after login success redirect path to /
+          navigate("/home");  // after login success redirect path to /
         }, 1000);
       } else {
         handleError(message);
