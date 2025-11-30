@@ -42,7 +42,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          navigate("https://trading-platform-ten.vercel.app/home");
+          window.location.href = "https://trading-ten.vercel.app/home";
         }, 1000);
       } else {
         handleError(message);

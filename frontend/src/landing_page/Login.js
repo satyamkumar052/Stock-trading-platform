@@ -43,7 +43,7 @@ const Login = () => {
         handleSuccess(message);
         localStorage.setItem("token", data.token);
         setTimeout(() => {
-          navigate("https://trading-platform-ten.vercel.app/home");  // after login success redirect path to /
+          window.location.href = "https://trading-ten.vercel.app/home";  // after login success redirect path to /
         }, 1000);
       } else {
         handleError(message);
