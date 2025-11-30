@@ -19,7 +19,7 @@ const PORT = process.env.PORT || "3000";
 const uri = process.env.MONGO_URL;
 
 app.use(cors({
-    origin: ["https://trading-dashboard-khaki-eight.vercel.app/", "https://trading-platform-ten.vercel.app"],
+    origin: ["https://trading-dashboard-khaki-eight.vercel.app", "https://trading-platform-ten.vercel.app"],
     credentials: true
 }));
 app.use(cookieParser());
