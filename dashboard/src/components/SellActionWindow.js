@@ -17,7 +17,7 @@ const SellActionWindow = ({uid, availableQty})=> {
             return;
         }
 
-        axios.post("http://localhost:3000/newOrder",{
+        axios.post("https://backend-8k3f.onrender.com/newOrder",{
             name:uid,
             qty:stockQuantity,
             price:stockPrice,

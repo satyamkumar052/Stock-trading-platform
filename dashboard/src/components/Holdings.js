@@ -9,7 +9,7 @@ function Holdings() {
     const [allHoldings, setAllHoldings] = useState([]);
 
     useEffect(()=>{
-        axios.get("http://localhost:3000/allHoldings").then((res)=>{
+        axios.get("https://backend-8k3f.onrender.com/allHoldings").then((res)=>{
             console.log(res.data);
             setAllHoldings(res.data);
         }).catch((err)=>{console.log("OOPS! Error")});
