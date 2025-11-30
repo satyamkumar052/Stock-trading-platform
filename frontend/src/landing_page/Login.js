@@ -43,7 +43,7 @@ const Login = () => {
         handleSuccess(message);
         localStorage.setItem("token", data.token);
         setTimeout(() => {
-          window.location.href = "https://trading-ten.vercel.app/home";  // after login success redirect path to /
+          window.location.href = "https://trading-dashboard-khaki-eight.vercel.app";  // after login success redirect path to /
         }, 1000);
       } else {
         handleError(message);

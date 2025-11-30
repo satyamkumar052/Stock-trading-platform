@@ -42,7 +42,7 @@ const Signup = () => {
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
-          window.location.href = "https://trading-ten.vercel.app/home";
+          window.location.href = "https://trading-dashboard-khaki-eight.vercel.app";
         }, 1000);
       } else {
         handleError(message);
