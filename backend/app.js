@@ -19,7 +19,7 @@ const PORT = process.env.PORT || "3000";
 const uri = process.env.MONGO_URL;
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://trading-platform-ten.vercel.app"],
+    origin: ["http://localhost:3000", "https://trading-platform-ten.vercel.app", "https://backend-8k3f.onrender.com"],
     credentials: true
 }));
 app.use(cookieParser());
