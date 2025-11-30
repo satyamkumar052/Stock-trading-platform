@@ -69,7 +69,7 @@ app.post("/newOrder", async(req, res)=>{
     res.send("Order placed!");
 });
 
-app.post("/verify", (req, res) => {
+app.get("/verify", (req, res) => {
   res.json({ status: true, user: "TestUser" });
 });
 
