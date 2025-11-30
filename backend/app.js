@@ -19,7 +19,7 @@ const PORT = process.env.PORT || "3000";
 const uri = process.env.MONGO_URL;
 
 app.use(cors({
-    origin: ["http://localhost:3002", "http://localhost:3001", "http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://trading-platform-ten.vercel.app/"],
     credentials: true
 }));
 app.use(cookieParser());
@@ -27,22 +27,22 @@ app.use(bodyparser.json());
 app.use("/", authRoute);
 
 
-app.get("/allOrders", async(req,res)=>{
+app.get("https://trading-platform-ten.vercel.app/allOrders", async(req,res)=>{
     let allOrders = await OrderModel.find({});
     res.json(allOrders);
 })
 
-app.get("/allHoldings", async(req, res)=>{
+app.get("https://trading-platform-ten.vercel.app/allHoldings", async(req, res)=>{
     let allHoldings = await HoldingModel.find({});;
     res.json(allHoldings);
 });
 
-app.get("/allPositions", async(req, res)=>{
+app.get("https://trading-platform-ten.vercel.app/allPositions", async(req, res)=>{
     let allPositions = await PositionModel.find({});;
     res.json(allPositions);
 });
 
-app.get("/getQty/:name", async(req,res)=>{
+app.get("https://trading-platform-ten.vercel.app/getQty/:name", async(req,res)=>{
     const stockname = req.params.name;
 
     const orders = await OrderModel.find({name:stockname});
@@ -57,7 +57,7 @@ app.get("/getQty/:name", async(req,res)=>{
     res.json({ qty:totalQty });
 });
 
-app.post("/newOrder", async(req, res)=>{
+app.post("https://trading-platform-ten.vercel.app/newOrder", async(req, res)=>{
     let newOrder = new OrderModel({
         name: req.body.name,
         qty: req.body.qty,
@@ -69,7 +69,7 @@ app.post("/newOrder", async(req, res)=>{
     res.send("Order placed!");
 });
 
-app.get("/verify", (req, res) => {
+app.get("https://trading-platform-ten.vercel.app/verify", (req, res) => {
   res.json({ status: true, user: "TestUser" });
 });
 
