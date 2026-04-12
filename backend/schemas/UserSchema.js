@@ -1,20 +1,20 @@
 const { Schema } = require('mongoose');
 
 const UserSchema = new Schema({
-    email:{
+    email: {
         type:String,
         require:true,
         unique:true,
     },
-    username:{
+    username: {
         type:String,
         require:true,
     },
-    password:{
+    password: {
         type:String,
         require:true,
     },
-    createdAt:{
+    createdAt: {
         type:Date,
         default:new Date,
     },
