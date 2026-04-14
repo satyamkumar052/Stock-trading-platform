@@ -9,7 +9,7 @@ function RightSection({imageUrl,productName,productDescription,learnMore}) {
                     <h1 className='my-5 pt-5 fs-2 text-muted'>{productName}</h1>
                     <p className='text-muted lh-lg fs-5'>{productDescription}</p>
                     <div className='my-4 pb-3'>
-                        <a href="#" className='me-5 fs-5'>{learnMore} <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <a href="javascript:void(0)" className='me-5 fs-5'>{learnMore} <i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
                 </div>
                 <div className='col-lg-8 p-3'>
