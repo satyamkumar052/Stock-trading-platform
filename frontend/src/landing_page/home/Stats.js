@@ -28,7 +28,7 @@ function Stats() {
                 </div>
 
                 <div className='col-lg-6 p-5'>
-                    <img src='media/ecosystem.png' style={{width:"100%", height:"80%"}}/>
+                    <img alt='' src='media/ecosystem.png' style={{width:"100%", height:"80%"}}/>
                     <div className='offset-1 mt-3'>
                         <a className='p2 mx-5'>Explore our products <i class="fa-solid fa-arrow-right-long"></i></a>
                         <a className='p2'>try kite demo <i class="fa-solid fa-arrow-right-long"></i></a>
