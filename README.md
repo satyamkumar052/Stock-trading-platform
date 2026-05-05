@@ -79,6 +79,16 @@ Ensure each runs on a unique port (example: frontend `3000`, dashboard `3001`, b
 
 ---
 
+## ✅ Quick Health Check
+
+- Frontend is reachable at `http://localhost:3000`
+- Dashboard is reachable at `http://localhost:3001`
+- Backend responds at `http://localhost:5000`
+
+If login fails, verify backend `.env` values first (`MONGO_URI` and `JWT_SECRET`).
+
+---
+
 ## 🔐 Authentication Flow
 
 1. User logs in from `/login`
