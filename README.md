@@ -37,6 +37,12 @@ A full-stack stock trading platform that allows users to execute buy/sell trades
 
 ## ⚙️ Installation & Setup
 
+### Prerequisites
+
+- Node.js 18 or newer
+- npm 9 or newer
+- MongoDB Atlas connection string
+
 Clone the repo:
 
 ```sh
